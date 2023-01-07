@@ -1,5 +1,5 @@
 import * as HomeStyle from './Home.styles';
-import * as CommonsStyle from '../../commons/styles';
+import * as CommonsStyle from '../../commons/Styles';
 
 export default function HomeUI(props: any) {
   return (
