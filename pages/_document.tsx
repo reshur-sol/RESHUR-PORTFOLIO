@@ -5,10 +5,6 @@ export default function Document() {
     <Html lang='ko'>
       <Head>
         <meta
-          name='viewport'
-          content='viewport-fit=cover'
-        />
-        <meta
           name='description'
           content="RESHUR's Portfolio"
         />
