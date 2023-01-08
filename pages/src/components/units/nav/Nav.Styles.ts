@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 // Nav Bar
 export const Navbar = styled.div`
-  width: 230px;
+  width: 260px;
   height: 100vh;
   display: flex;
   flex-direction: column;
