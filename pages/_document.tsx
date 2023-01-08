@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import Container from './src/components/commons/Title';
 
 export default function Document() {
   return (
@@ -21,8 +22,8 @@ export default function Document() {
           href='https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300;400;600;700&family=Roboto+Mono:wght@300;400;500;600;700&family=Rock+Salt&display=swap'
           rel='stylesheet'
         />
-        <title>HELLO, I'M RESHUR</title>
       </Head>
+      <Container />
       <body>
         <Main />
         <NextScript />
