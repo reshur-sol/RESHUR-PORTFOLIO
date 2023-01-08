@@ -1,5 +1,11 @@
 import styled from '@emotion/styled';
-
+// Main
+export const Frame = styled.div`
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+`;
+// Global
 export const PageTitle = styled.div`
   font-size: 62px;
   font-family: 'Chivo Mono', monospace;
