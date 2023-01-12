@@ -1,43 +1,46 @@
+import * as NavStyles from './Nav.Styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faRss } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import * as NavStyles from './Nav.Styles';
-import Title from '../../commons/Title';
+import Link from 'next/link';
+import NavLinks from '../../../../../data/navlinks';
 
-export default function NavUI(props: any) {
+export default function NavUI(props) {
   return (
     <NavStyles.Navbar>
-      <Title />
       <NavStyles.Logo>
         <FontAwesomeIcon
           icon={faMoon}
           className='Logo'
-          onClick={props.MoveToHome}
         />
       </NavStyles.Logo>
       <NavStyles.Menu>
-        <NavStyles.Menuitem onClick={props.MoveToHome}>Home</NavStyles.Menuitem>
-        <NavStyles.Menuitem onClick={props.MoveToAboutMe}>About Me</NavStyles.Menuitem>
-        <NavStyles.Menuitem onClick={props.MoveToWork}>Work</NavStyles.Menuitem>
-        <NavStyles.Menuitem onClick={props.MoveToContact}>Contact</NavStyles.Menuitem>
+        {NavLinks.map((nav) => (
+          <Link
+            href={nav.link}
+            key={nav.title}
+          >
+            <NavStyles.MenuItem>{nav.title}</NavStyles.MenuItem>
+          </Link>
+        ))}
       </NavStyles.Menu>
       <NavStyles.SocialIcon>
-        <a
+        <Link
           className='Github'
           href='https://github.com/reshur-sol'
           target='_blank'
           rel='noreferrer'
         >
           <FontAwesomeIcon icon={faGithub} />
-        </a>
-        <a
+        </Link>
+        <Link
           className='Blog'
           href='https://reshur-sol.github.io'
           target='_blank'
           rel='noreferrer'
         >
           <FontAwesomeIcon icon={faRss} />
-        </a>
+        </Link>
       </NavStyles.SocialIcon>
       <NavStyles.Copyright>©️{props.copyright}</NavStyles.Copyright>
     </NavStyles.Navbar>

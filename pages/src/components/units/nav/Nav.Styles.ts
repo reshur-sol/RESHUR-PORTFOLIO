@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 // Nav Bar
-export const Navbar = styled.div`
+export const Navbar = styled.nav`
   width: 260px;
   height: 100vh;
   display: flex;
@@ -20,15 +20,16 @@ export const Logo = styled.div`
     cursor: pointer;
   }
 `;
-export const Menu = styled.div`
+export const Menu = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Chivo Mono', monospace;
   font-size: 20px;
   font-weight: 500;
+  list-style: none;
 `;
-export const Menuitem = styled.div`
+export const MenuItem = styled.li`
   cursor: pointer;
   margin: 15px 0;
   color: #616161;
@@ -46,7 +47,6 @@ export const SocialIcon = styled.div`
   bottom: 30px;
   a {
     margin: 0 15px;
-    cursor: pointer;
   }
   .Github,
   .Blog {
@@ -54,6 +54,7 @@ export const SocialIcon = styled.div`
       color: #ff8a80;
       transition: all 300ms ease-in;
       transform: scale(1.3);
+      cursor: pointer;
     }
   }
 `;
