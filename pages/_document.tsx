@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import Container from './src/components/commons/Title';
 
 export default function Document() {
   return (
@@ -23,7 +22,6 @@ export default function Document() {
           rel='stylesheet'
         />
       </Head>
-      <Container />
       <body>
         <Main />
         <NextScript />
